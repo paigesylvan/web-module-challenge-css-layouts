@@ -1,6 +1,29 @@
 /* Add CSS styling here */
 
-.buttons {
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+header, section {
+    padding: 4% 0;
+}
+
+.links {
     display: flex;
     justify-content: space-between;
 }
@@ -15,9 +38,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    font-size: large;
-    width: 600px;
+
     height: 400px;
+    width: 600px; 
+ 
 }
 
 
@@ -30,8 +54,14 @@ footer {
 .row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 20px;
+}
+
+.row div {
+    width: 30%;
+    margin: 2% 0;
 }
 
 .portfolio-element {
@@ -55,4 +85,35 @@ button:hover {
 button a {
     text-decoration: none;
     color: inherit;
+}
+
+@media(max-width: 800px) {
+
+}
+
+@media(max-width: 500px) {
+    nav{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .links{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .links button{
+        width: 40%;
+        length: 100%;
+        margin: 0;
+    }
+    .top-section {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .row div{
+        width: 40%;
+    }
 }
